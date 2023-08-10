@@ -92,7 +92,16 @@ export default function HomePage() {
             username={comments.username}
             commentText={comments.commentText}
             likeNum={comments.likeNum}
-            replies={comments.replies}
+            replies={comments.map(
+              (replies = (
+                <Reply
+                  userImagePath={replies.userImagePath}
+                  username={replies.username}
+                  replyText={replies.replyText}
+                  likeNum={replies.likeNum}
+                />
+              ))
+            )}
             key={comments.username}
           />
         ))}

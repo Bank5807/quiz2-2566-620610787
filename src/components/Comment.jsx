@@ -1,5 +1,4 @@
 import { comments } from "@/libs/comments";
-import { Reply } from "@/components/Reply";
 
 export const Comment = ({
   userImagePath,
@@ -22,7 +21,7 @@ export const Comment = ({
       {likeNum < 0 ? <span>{likeNum}</span> : <span>hidden</span>}
       {/* map-loop render Reply component here */}
       <span>{replies}</span>
-      {comments.map((replies) => (
+      {replies.map((replies) => (
         <Comment
           userImagePath={replies.userImagePath}
           username={replies.username}

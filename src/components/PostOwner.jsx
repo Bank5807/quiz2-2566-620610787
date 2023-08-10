@@ -1,6 +1,3 @@
-import { comments } from "@/libs/comments";
-import { Reply } from "./Reply";
-
 export const PostOwner = ({
   userImagePath,
   username,
